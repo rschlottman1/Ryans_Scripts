@@ -75,7 +75,7 @@ echo "" >> responsetemp.fil
 
 echo "" >> responsetemp.fil #TODO signature
 
-#you need to install xclip and the handle is specified here.
+# you need to install pbcopy and the handle is specified here.
 
 cat responsetemp.fil | pbcopy
 
