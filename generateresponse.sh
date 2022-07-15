@@ -75,8 +75,24 @@ echo "" >> responsetemp.fil
 
 echo "" >> responsetemp.fil #TODO signature
 
-# you need to install pbcopy and the handle is specified here.
+#Lets create a variable to figure out what kernel we're running on.
+systype=$(uname)
 
-cat responsetemp.fil | pbcopy
+case $systype in
 
+
+  Darwin)
+  #If Darwin, pbcopy should be built-in.
+  cat responsetemp.fil | pbcopy
+    ;;
+
+  Linux)
+  #If Linux you need to install xclip and the handle is specified here.
+  cat responsetemp.fil | xclip -selection c
+    ;;
+
+
+esac
+
+#Lastly lets clean up
 rm responsetemp.fil
