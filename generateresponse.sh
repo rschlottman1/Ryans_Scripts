@@ -59,7 +59,7 @@ fi
 
 echo "" >> responsetemp.fil
 
-echo "I hope this fixes the issue, If you have any further questions on the issue, please give us a call at 4900 or respond to this email, and it'll automatically re-open the ticket." >> responsetemp.fil
+echo "Thank you for contacting Pima's IT Department If you have any further questions on the issue, please give us a call at 520-206-4900 (Or just Extension:4900 on a Pima phone) or respond to this email, and it'll automatically re-open the ticket. We Are always available via phone during these business hours: IT Service Desk Hours: Mon-Fri: 8am-5:00pm" >> responsetemp.fil
 
 echo "" >> responsetemp.fil
 
@@ -73,10 +73,10 @@ fi
 
 echo "" >> responsetemp.fil
 
-echo "-Kent in IT" >> responsetemp.fil
+echo "" >> responsetemp.fil #TODO signature
 
 #you need to install xclip and the handle is specified here.
 
-cat responsetemp.fil | xclip -selection c
+cat responsetemp.fil | pbcopy
 
 rm responsetemp.fil
